@@ -7,12 +7,16 @@ Interactive SolarEX website animation prototype implemented as native browser co
 - Autoplay intro sequence using seven numbered technical SolarEX frames.
 - Final frame remains as the resting visual basis after the intro.
 - Hero text, CTA controls, telemetry cards and graph remain hidden during intro and reveal only after completion.
-- Three.js solar-panel surface with click-hold drag, pointer tilt, touch drag and inertial easing.
+- CSS 3D solar-panel surface with click-hold drag, pointer tilt, touch drag and inertial easing.
 - Persistent parent-container pointer listeners with one animation state machine: `loading → intro → ready → dragging → inertia`.
-- GSAP sequencing and reveal choreography.
-- Animation stack enabled through dependencies: GSAP, Three.js, Rive, dotLottie and PixiJS.
+- Dark technical stage with HUD corners, scan sweep, ambient grid, particles, data rings and highlighted panel-cell state.
+- Animation stack declared for next implementation stage through dependencies: GSAP, Three.js, Rive, dotLottie and PixiJS.
 - Quartz SiO₂ and Titan TiO₂ mechanism visuals with claim-control discipline.
 - Reduced-motion fallback, accessible labels, responsive layout and no public secrets.
+
+## Current implementation note
+
+The current committed version is a static GitHub Pages-compatible implementation in `index.html`. It uses native HTML/CSS/JavaScript for the first-pass animation and declares GSAP, Three.js, Rive, dotLottie, PixiJS and Vite in `package.json` for the next modular runtime upgrade.
 
 ## Local validation
 
@@ -21,6 +25,8 @@ npm install
 npm run dev
 npm run build
 ```
+
+For the current static page, opening `index.html` directly is also sufficient for a visual smoke test.
 
 ## Manual QA
 
