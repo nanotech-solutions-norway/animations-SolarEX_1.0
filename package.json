@@ -1,0 +1,21 @@
+{
+  "name": "animations-solarex-1-0",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@lottiefiles/dotlottie-web": "latest",
+    "@rive-app/canvas": "latest",
+    "gsap": "latest",
+    "pixi.js": "latest",
+    "three": "latest"
+  },
+  "devDependencies": {
+    "vite": "latest"
+  }
+}
