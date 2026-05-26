@@ -1,4 +1,4 @@
-name: Deploy static SolarEX animation
+name: Publish static SolarEX animation
 
 on:
   push:
@@ -6,29 +6,36 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
-  group: pages
+  group: static-pages-publish
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  publish:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
-      - name: Upload static site
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
-      - name: Deploy
-        uses: actions/deploy-pages@v4
+
+      - name: Prepare static site artifact
+        run: |
+          rm -rf public
+          mkdir -p public
+          cp index.html public/index.html
+          cp README.md public/README.md
+          cp -r .github public/.github-source-reference || true
+          touch public/.nojekyll
+
+      - name: Publish to gh-pages branch
+        run: |
+          cd public
+          git init
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b gh-pages
+          git add .
+          git commit -m "Publish SolarEX static animation"
+          git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          git push --force origin gh-pages
