@@ -1,0 +1,58 @@
+{
+  "project": "SolarEX interactive 3D solar panel model",
+  "modelVersion": "1.0.0",
+  "sourceFrames": [
+    "Animation_scenen_001.png",
+    "Animation_scenen_002.png",
+    "Animation_scenen_003.png",
+    "Animation_scenen_004.png",
+    "Animation_scenen_005.png",
+    "Animation_scenen_006.png",
+    "Animation_scenen_007.png",
+    "Animation_scenen_008.png"
+  ],
+  "cinematicSceneOrder": [
+    "Animation_scenen_001",
+    "Animation_scenen_002",
+    "Animation_scenen_007",
+    "Animation_scenen_004",
+    "Animation_scenen_008",
+    "Animation_scenen_003",
+    "Animation_scenen_006",
+    "Animation_scenen_005",
+    "Animation_scenen_001"
+  ],
+  "acceptanceCriteria": {
+    "startsWith": "Animation_scenen_001",
+    "endsWith": "Animation_scenen_001",
+    "dragRotateEnabled": true,
+    "playButtonCinematicRotation": true,
+    "smoothKeyframeTransitions": true,
+    "highDetailFinish": true,
+    "reducedMotionFallback": true
+  },
+  "geometryProfile": {
+    "panelColumns": 6,
+    "panelRows": 6,
+    "highlightedCells": "center 3 x 3 red illuminated cell group",
+    "frontDetails": [
+      "transparent glass face",
+      "white wireframe module frame",
+      "dark photovoltaic cells",
+      "fine busbar striation texture",
+      "cell connector nodes",
+      "red highlighted 3 x 3 cell group"
+    ],
+    "rearDetails": [
+      "rear cell grid",
+      "junction box",
+      "dual output cables",
+      "horizontal support rail",
+      "vertical rails",
+      "clamps",
+      "brackets",
+      "central pedestal",
+      "base plate bolts"
+    ]
+  }
+}
