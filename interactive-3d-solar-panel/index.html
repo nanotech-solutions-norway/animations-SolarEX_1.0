@@ -11,21 +11,18 @@
   <main class="viewer-shell" aria-label="SolarEX interactive 3D solar panel model">
     <section class="stage-card">
       <div class="hud top-left">
-        <span class="eyebrow">SolarEX technical model</span>
-        <h1>Interactive PV Module Assembly</h1>
-        <p>Drag to rotate and tilt. Use Play for the cinematic orbit sequence.</p>
+        <span class="eyebrow">Technical model</span>
+        <h1>Interactive PV Module</h1>
       </div>
 
-      <div class="hud top-right" aria-label="Animation status">
-        <div class="status-dot" aria-hidden="true"></div>
-        <span id="sceneLabel">Animation_scenen_001</span>
-      </div>
+      <div class="interaction-hint top-right" aria-label="Interaction instruction">Drag to rotate and tilt.</div>
+      <span id="sceneLabel" class="sr-only">Animation_scenen_001</span>
 
       <canvas id="solarCanvas" aria-label="Interactive 3D solar panel model"></canvas>
 
       <div class="control-bar" aria-label="Model controls">
         <button id="playBtn" type="button">Play cinematic rotation</button>
-        <button id="resetBtn" type="button">Reset to Animation_scenen_001</button>
+        <button id="resetBtn" type="button">Reset view</button>
         <label class="toggle-row">
           <input id="autoRotate" type="checkbox" />
           <span>Slow technical rotation</span>
