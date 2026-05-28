@@ -74,20 +74,34 @@ body {
 .top-right {
   top: clamp(14px, 2vw, 28px);
   right: clamp(14px, 2vw, 28px);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  border-radius: 999px;
-  font: 600 13px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  color: #cfeeff;
 }
 
-.status-dot {
-  width: 9px;
-  height: 9px;
+.interaction-hint {
+  position: absolute;
+  z-index: 5;
+  padding: 10px 14px;
+  border: 1px solid rgba(255,255,255,0.10);
   border-radius: 999px;
-  background: var(--red);
-  box-shadow: 0 0 16px var(--red);
+  background: rgba(4, 7, 8, 0.46);
+  backdrop-filter: blur(12px);
+  color: #d7efff;
+  font: 700 12px/1.15 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  letter-spacing: 0.04em;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.28);
+}
+
+.status-dot { display: none; }
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 
 .eyebrow {
@@ -100,7 +114,7 @@ body {
 }
 
 h1 {
-  margin: 0 0 8px;
+  margin: 0;
   font-size: clamp(23px, 3vw, 44px);
   line-height: 0.95;
   letter-spacing: -0.04em;
@@ -168,7 +182,12 @@ button:hover,
 @media (max-width: 760px) {
   body { overflow: auto; }
   .viewer-shell { height: 100svh; padding: 8px; }
-  .top-right { display: none; }
+  .interaction-hint {
+    top: 12px;
+    right: 12px;
+    font-size: 11px;
+    padding: 8px 10px;
+  }
   .control-bar {
     width: calc(100% - 28px);
     flex-wrap: wrap;
