@@ -212,14 +212,7 @@ button:hover,
   }
 
   .interaction-hint {
-    top: max(10px, env(safe-area-inset-top));
-    right: max(10px, env(safe-area-inset-right));
-    max-width: min(40vw, 190px);
-    padding: 8px 10px;
-    font-size: 10.5px;
-    line-height: 1.2;
-    white-space: normal;
-    text-align: right;
+    display: none;
   }
 
   .eyebrow {
@@ -269,11 +262,6 @@ button:hover,
     padding: 9px 10px;
   }
 
-  .interaction-hint {
-    max-width: 42vw;
-    font-size: 10px;
-  }
-
   h1 { font-size: 17px; }
 
   button,
@@ -287,10 +275,6 @@ button:hover,
   .top-left {
     max-width: 260px;
     padding: 8px 10px;
-  }
-
-  .interaction-hint {
-    max-width: 220px;
   }
 
   .control-bar {
