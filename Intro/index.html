@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SolarEX Intro</title>
+  <meta name="description" content="SolarEX intro scan animation using fixed image layers Intro_001, Intro_002, and Intro_003.">
+  <link rel="preload" as="image" href="./assets/images/Intro_001.png">
+  <link rel="preload" as="image" href="./assets/images/Intro_002.png">
+  <link rel="preload" as="image" href="./assets/images/Intro_003.jpg">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="intro-stage" aria-label="SolarEX technical scan intro animation">
+    <section class="frame" aria-hidden="true">
+      <img class="layer layer-001" src="./assets/images/Intro_001.png" alt="">
+      <img class="layer layer-002" src="./assets/images/Intro_002.png" alt="">
+      <img class="layer layer-003" src="./assets/images/Intro_003.jpg" alt="">
+
+      <div class="technical-grid"></div>
+      <div class="scan scan-a"><span></span></div>
+      <div class="scan scan-b"><span></span></div>
+      <div class="hud hud-a"></div>
+      <div class="hud hud-b"></div>
+      <div class="selected-cells"><i></i><i></i><i></i><i></i></div>
+      <div class="selection-reticle"></div>
+      <div class="lens-flash"></div>
+      <div class="vignette"></div>
+    </section>
+  </main>
+</body>
+</html>
