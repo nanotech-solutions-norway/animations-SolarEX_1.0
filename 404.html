@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Redirecting to SolarEX Intro</title>
+  <style>html,body{margin:0;min-height:100%;background:#020407;color:#e9f6ff;font-family:Arial,sans-serif;display:grid;place-items:center}a{color:#8dd7ff}</style>
+</head>
+<body>
+  <main>
+    <h1>SolarEX Intro Animation</h1>
+    <p>Redirecting to the current animation route...</p>
+    <p><a href="/animations-SolarEX_1.0/Intro/">Open animation</a></p>
+  </main>
+  <script>
+    (function(){
+      var base='/animations-SolarEX_1.0/';
+      var target=base+'Intro/';
+      if(location.pathname.indexOf('/animations-SolarEX_1.0/')===0){
+        location.replace(target);
+      }
+    }());
+  </script>
+</body>
+</html>
